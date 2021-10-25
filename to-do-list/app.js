@@ -10,7 +10,7 @@ let arr = [
 
 function renderToDo() {
     listElement.innerHTML = '';
-    
+
     arr.forEach((item, index) => {
         var liElement = document.createElement('li');
         var liText = document.createTextNode(item);
@@ -20,8 +20,8 @@ function renderToDo() {
 
         linkLi.setAttribute('href', '#');
         linkLi.setAttribute('onclick', `deleteItem(${index})`);
-        linkLi.appendChild(textLink); // texto do link para dentro do link
 
+        linkLi.appendChild(textLink); // texto do link para dentro do link
         liElement.appendChild(liText); // coloca o texto dentro do item <li></li>
         liElement.appendChild(linkLi); 
         listElement.appendChild(liElement); // coloca o item <li></li> dentro da lista .list <ul>
